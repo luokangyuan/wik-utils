@@ -2,6 +2,7 @@ package com.wik.util.sms;
 
 import com.alibaba.fastjson.JSON;
 import com.aliyuncs.CommonRequest;
+import com.aliyuncs.CommonResponse;
 import com.aliyuncs.DefaultAcsClient;
 import com.aliyuncs.IAcsClient;
 import com.aliyuncs.exceptions.ClientException;
@@ -154,7 +155,7 @@ public class AliYunSmsClient {
     public void send(final SmsTemplate smsTemplate) {
         Objects.requireNonNull(smsTemplate);
         checkSmsTemplate(smsTemplate);
-        final var request = new CommonRequest();
+        final CommonRequest request = new CommonRequest();
         request.setSysMethod(MethodType.POST);
         request.setSysDomain(SmsConstants.SMS_SYS_DOMAIN);
         request.setSysVersion("2017-05-25");
@@ -164,7 +165,7 @@ public class AliYunSmsClient {
         request.putQueryParameter("TemplateCode", smsTemplate.getTemplateCode());
         request.putQueryParameter("TemplateParam", SmsUtils.toJsonStr(smsTemplate.getTemplateParam()));
         try {
-            final var response = this.acsClient.getCommonResponse(request);
+            final CommonResponse response = this.acsClient.getCommonResponse(request);
             checkSmsResponse(response);
         } catch (final ClientException e) {
             throw new SmsException(e);
@@ -183,7 +184,7 @@ public class AliYunSmsClient {
     public void send(final BatchSmsTemplate batchSmsTemplate) {
         Objects.requireNonNull(batchSmsTemplate);
         checkBatchSmsTemplate(batchSmsTemplate);
-        final var request = new CommonRequest();
+        final CommonRequest request = new CommonRequest();
         request.setSysMethod(MethodType.POST);
         request.setSysDomain(SmsConstants.SMS_SYS_DOMAIN);
         request.setSysVersion("2017-05-25");
@@ -193,7 +194,7 @@ public class AliYunSmsClient {
         request.putQueryParameter("TemplateCode", batchSmsTemplate.getTemplateCode());
         request.putQueryParameter("TemplateParamJson", JSON.toJSONString(batchSmsTemplate.getTemplateParams()));
         try {
-            final var response = this.acsClient.getCommonResponse(request);
+            final CommonResponse response = this.acsClient.getCommonResponse(request);
             checkSmsResponse(response);
         } catch (final ClientException e) {
             throw new SmsException(e);
