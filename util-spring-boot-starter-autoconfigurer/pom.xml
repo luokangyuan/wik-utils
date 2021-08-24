@@ -14,7 +14,7 @@
 
 	<name>util-spring-boot-starter</name>
 
-	<description>Demo project for Spring Boot</description>
+
 
     <dependencies>
         <dependency>
@@ -33,5 +33,13 @@
             <optional>true</optional>
         </dependency>
     </dependencies>
+    <description>Demo project for Spring Boot</description>
+    <url>https://github.com/luokangyuan/wik-utils</url>
+    <licenses>
+        <license>
+            <name>The Apache Software License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+        </license>
+    </licenses>
 
 </project>

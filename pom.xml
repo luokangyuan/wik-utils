@@ -12,6 +12,25 @@
     </modules>
     <name>wik-util-parent</name>
     <description>wik util project parent</description>
+    <url>https://github.com/luokangyuan/wik-utils</url>
+    <licenses>
+        <license>
+            <name>The Apache Software License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+        </license>
+    </licenses>
+    <scm>
+        <url>https://github.com/luokangyuan/wik-utils.git</url>
+        <connection>scm:git:ssh://github.com/luokangyuan/wik-utils.git</connection>
+        <developerConnection>scm:git:ssh://git@github.com/luokangyuan/wik-utils.git</developerConnection>
+        <tag>HEAD</tag>
+    </scm>
+    <developers>
+        <developer>
+            <name>luokangyuan</name>
+            <email>lky9503@163.com</email>
+        </developer>
+    </developers>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
