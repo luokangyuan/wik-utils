@@ -39,7 +39,7 @@
             </dependency>
             <dependency>
                 <groupId>com.luokangyuan</groupId>
-                <artifactId>util-spring-boot-starter-autoconfigurer</artifactId>
+                <artifactId>util-spring-boot-starter</artifactId>
                 <version>${project.version}</version>
             </dependency>
         </dependencies>
