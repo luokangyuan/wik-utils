@@ -5,12 +5,12 @@
     <parent>
         <groupId>io.github.luokangyuan</groupId>
         <artifactId>wik-util-parent</artifactId>
-        <version>1.0.0-SNAPSHOT</version>
+        <version>0.0.1-RELEASE</version>
         <relativePath>../</relativePath>
     </parent>
 
 	<artifactId>util-spring-boot-starter</artifactId>
-	<version>1.0.0-SNAPSHOT</version>
+	<version>0.0.1-RELEASE</version>
 
 	<name>util-spring-boot-starter</name>
 
